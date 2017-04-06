@@ -11,33 +11,25 @@ import java.util.Scanner;
  *
  * @author Praktikan
  */
-public class Jurnal {
-
-    /**
-     * @param args the command line arguments
-     */
-    
-        public static void main(String[]args) {
-        Scanner show = new Scanner(System.in);
-        System.out.print("Masukan Jumlah Deret Fibonacci ");
-        int n = show.nextInt();
-        long fib[] = new long[n];
-         
-        fib[0] = 0;
-        fib[1] = 1;
-         
-        for(int i = 2; i < n; i++) {
-            fib[i] = fib[i-1] + fib[i-2];
-        }
-         
-        for (int i = 0; i < n; i++) {
-            System.out.print(fib[i] +  " ");
-        }
-    
-    }
-    
-    
-
-    
-    
+import java.util.Scanner;
+public class Jurnal
+{
+  public static void main(String[] args)
+  {
+    Scanner in = new Scanner(System.in);
+    int n;
+    System.out.print("Masukan Nilai n = ");
+    n=in.nextInt();
+    System.out.println("Jumlah Nilai Fibonacci = " +Fibonaci(n));
+  }
+    static int Fibonaci(int n)
+  {
+    if ((n == 1)||(n==2))
+    return (1);
+      else
+    return (Fibonaci(n-1)+Fibonaci(n-2));
+  }
 }
+
+
+//SUDAH DI EDIT
